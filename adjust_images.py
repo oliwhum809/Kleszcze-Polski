@@ -50,8 +50,8 @@ try:
     os.mkdir('adjusted_data_set')
     for type in ['train', 'validate']:
         os.mkdir('adjusted_data_set\\' + type)
-        for lession in ['AK', 'BCC', 'BKL', 'DF', 'MEL', 'NV', 'SCC', 'VASC']:
-            os.mkdir('adjusted_data_set\\' + type + '\\' + lession)
+        for genom in ['Ixodes', 'Dermacentor', 'Amblyomma']:
+            os.mkdir('adjusted_data_set\\' + type + '\\' + genom)
 except OSError as error:
     print('Skipping folder creation... They already exist!')
 for folder in glob.glob(os.getcwd() + '\\manipulated_data_set' + '\\*'):
